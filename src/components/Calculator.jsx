@@ -54,7 +54,7 @@ const Calculator = () => {
   }, [calc, isEditable]);
 
   return (
-    <div className="flex items-center justify-center h-screen w-screen p-0 sm:p-4 bg-gray-900 transition-colors duration-500 font-sans overflow-hidden">
+    <div className="flex flex-col items-center justify-center h-screen w-screen p-0 sm:p-4 bg-gray-900 transition-colors duration-500 font-sans overflow-hidden">
       
       <motion.div 
          initial={{ opacity: 0, scale: 0.95 }}
@@ -148,6 +148,18 @@ const Calculator = () => {
         />
         
       </motion.div>
+
+      {/* Promotion Signature moved strictly outside and below the Calculator */}
+      <div className="mt-4 text-center z-10 w-full opacity-60">
+         <a 
+           href="https://faizyab-hussain.vercel.app/" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           className="text-xs text-gray-400 font-semibold tracking-widest uppercase hover:text-[#8ab4f8] transition-colors cursor-pointer"
+         >
+           Built by Faizyab Hussain
+         </a>
+      </div>
     </div>
   );
 };
